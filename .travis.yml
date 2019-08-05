@@ -7,5 +7,4 @@ node_js:
 
 # command to run tests
 script:
-  - yarn
   - yarn test
