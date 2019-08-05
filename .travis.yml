@@ -1,0 +1,11 @@
+# references:
+# Travis-CI - Javascript : https://docs.travis-ci.com/user/languages/javascript-with-nodejs
+
+language: node_js
+node_js:
+  - node
+
+# command to run tests
+script:
+  - yarn
+  - yarn test
