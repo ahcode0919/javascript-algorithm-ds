@@ -3,7 +3,7 @@
 
 Repository for examples of typical algorithm solutions and data structures in Javascript
 
-- [Freecodecamp - Javascript Algorithms & Data Structures](#freecodecamp-javascript-algorithms-data-structures)
+- [Freecodecamp - Javascript Algorithms & Data Structures](#freecodecamp-javascript-algorithms--data-structures)
   - [Basic Algorithms](#basic-algorithms)
 
 ## Freecodecamp: Javascript Algorithms & Data Structures
