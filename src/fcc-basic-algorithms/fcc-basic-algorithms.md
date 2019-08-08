@@ -16,6 +16,7 @@ From the Freecodecamp Basic Algorithms Javascript certification module
 - [Boo Hoo](#boo-hoo)
 - [Title Case](#title-case)
 - [Slice and Splice](#slice-and-splice)
+- [Falsy Bouncer](#falsy-bouncer)
 
 #### Celsius to Fahrenheit
 
@@ -219,5 +220,22 @@ export function frankenSplice2(arr1, arr2, n) {
         newArray.splice(n, 0, arr1[i]);
     }
     return newArray;
+}
+```
+
+#### Falsy Bouncer
+
+Remove all falsy values from an array.
+
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+```javascript
+export function bouncer(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (new Boolean(arr[i]) == false) {
+          arr.splice(i, 1);
+        }
+      }
+      return arr;
 }
 ```
