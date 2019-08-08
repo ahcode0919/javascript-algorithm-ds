@@ -189,3 +189,31 @@ export function titleCase(str) {
     return capitalizedWords.join(' ');
 }
 ```
+
+#### Slice and Splice
+
+Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+
+Begin inserting elements at index n of the second array.
+
+Return the resulting array. The input arrays should remain the same after the function runs.
+
+```javascript
+// Slice at next index
+export function frankenSplice(arr1, arr2, n) {
+    let newArray = arr2.slice(0);
+    for (let i = 0; i < arr1.length; i++) {
+        newArray.splice(n + i, 0, arr1[i]);
+    }
+    return newArray;
+}
+
+// Slice in reverse at same index
+export function frankenSplice2(arr1, arr2, n) {
+    let newArray = arr2.slice(0);
+    for (let i = arr1.length - 1; i >= 0; i--) {
+        newArray.splice(n, 0, arr1[i]);
+    }
+    return newArray;
+}
+```
