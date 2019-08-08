@@ -17,6 +17,9 @@ From the Freecodecamp Basic Algorithms Javascript certification module
 - [Title Case](#title-case)
 - [Slice and Splice](#slice-and-splice)
 - [Falsy Bouncer](#falsy-bouncer)
+- [Where Do I Belong](#where-do-i-belong)
+- [Mutations](#mutations)
+- [Chunky Monkey](#chunky-monkey)
 
 #### Celsius to Fahrenheit
 
@@ -282,5 +285,22 @@ export function mutation(arr) {
         }
     }
     return true;
+}
+```
+
+#### Chunky Monkey
+
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+```javascript
+export function chunkArrayInGroups(arr, size) {
+    let matrix = [];
+    let index = 0;
+    while (index < arr.length) {
+        let tempArray = arr.slice(index, index + size);
+        matrix.push(tempArray);
+        index += size;
+    }
+    return matrix;
 }
 ```
