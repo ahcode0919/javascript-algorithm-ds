@@ -1,4 +1,5 @@
 # Javascript Algorithms and Data Structures
+
 [![Build Status](https://travis-ci.org/ahcode0919/javascript-algorithm-ds.svg?branch=master)](https://travis-ci.org/ahcode0919/javascript-algorithm-ds)
 
 Repository for examples of typical algorithm solutions and data structures in Javascript
@@ -100,5 +101,17 @@ export function largestOfFour2(arr) {
         largest.push(largestNumber);
     }
     return largest;
+}
+```
+
+#### Confirm the Ending
+
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+Ex: Connor, or => true
+
+```javascript
+export function confirmEnding(str, target) {
+    return str.substring(str.lastIndexOf(target)) === target;
 }
 ```
