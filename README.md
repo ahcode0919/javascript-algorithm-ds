@@ -160,3 +160,13 @@ export function findElement(arr, func) {
     return undefined;
 }
 ```
+
+#### Boo Hoo
+
+Check if a value is classified as a boolean primitive. Return true or false.
+
+```javascript
+export function booWho(bool) {
+    return typeof bool === "boolean";
+}
+```
