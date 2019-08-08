@@ -1,12 +1,21 @@
 <!-- markdownlint-disable MD001 -->
 
-# Freecodecamp: Javascript Algorithms & Data Structures
+# Freecodecamp Basic Algorithms
 
-Algorithms from the Freecodecamp Javascript coursework
+From the Freecodecamp Basic Algorithms Javascript certification module
 
-## Basic algorithms
-
-From the Basic Algorithms Javascript certification module
+- [Celsius to Fahrenheit](#celsius-to-fahrenheit)
+- [Reverse String](#reverse-string)
+- [Factorialize Number](#factorialize-number)
+- [Find Longest Word In String](#find-longest-word-in-string)
+- [Return Largest Number In Nested Arrays](#return-largest-number-in-nested-arrays)
+- [Confirm the Ending](#confirm-the-ending)
+- [Repeat a String](#repeat-a-string)
+- [Truncate String](#truncate-string)
+- [Finders Keepers](#finders-keepers)
+- [Boo Hoo](#boo-hoo)
+- [Title Case](#title-case)
+- [Slice and Splice](#slice-and-splice)
 
 #### Celsius to Fahrenheit
 
