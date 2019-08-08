@@ -239,3 +239,24 @@ export function bouncer(arr) {
       return arr;
 }
 ```
+
+#### Where Do I Belong
+
+Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+```javascript
+export function getIndexToIns(arr, num) {
+    let index = arr.length;
+    const sortedArray = arr.slice(0).sort((a, b) => a - b);
+
+    for (let i = 0; i < sortedArray.length; i++) {
+        if (num <= sortedArray[i]) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+```
