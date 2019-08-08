@@ -132,3 +132,16 @@ export function repeatStringNumTimes(str, num) {
     return arr.join('');
 }
 ```
+
+#### Truncate String
+
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+
+```javascript
+export function truncateString(str, num) {
+    if (num >= str.length) {
+        return str;
+    }
+    return str.substring(0, num) + '...';
+}
+```
