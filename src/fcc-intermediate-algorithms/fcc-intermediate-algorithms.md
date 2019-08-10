@@ -16,7 +16,7 @@ The lowest number will not always come first.
 
 ```javascript
 export function sumAll(arr) {
-    const ordered = arr[0] < arr[1] ? [arr[0], arr[1]] : [arr[1], arr[0]];
+    const ordered = arr.slice(0).sort((a, b) => a - b);
     let range = 0;
   
     for (let i = ordered[0] + 1; i < ordered[1]; i++) {
