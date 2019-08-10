@@ -5,6 +5,8 @@
 From the Freecodecamp Javascript Certification Intermediate Algorithms module
 
 - [Sum All Numbers In a Range](#sum-all-numbers-in-a-range)
+- [Diff Two Arrays](#diff-two-arrays)
+- [Seek and Destroy](#seek-and-destroy)
 
 #### Sum All Numbers In a Range
 
@@ -35,5 +37,15 @@ export function diffArray(arr1, arr2) {
         ...arr1.filter((value) => arr2.indexOf(value) === -1),
         ...arr2.filter((value) => arr1.indexOf(value) === -1)
       ]
+}
+```
+
+#### Seek and Destroy
+
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+```javascript
+export function destroyer(arr, ...values) {
+    return arr.filter((num) => !values.includes(num));
 }
 ```
