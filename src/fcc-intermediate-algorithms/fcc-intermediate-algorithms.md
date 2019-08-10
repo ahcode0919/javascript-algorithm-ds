@@ -8,6 +8,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Diff Two Arrays](#diff-two-arrays)
 - [Seek and Destroy](#seek-and-destroy)
 - [Wherefore Art Thou](#wherefore-art-thou)
+- [Spinal Tap Case](#spinal-tap-case)
 
 #### Sum All Numbers In a Range
 
@@ -67,5 +68,15 @@ export function whatIsInAName(collection, source) {
         }
         return true;
     });
+}
+```
+
+#### Spinal Tap Case
+
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+```javascript
+export function spinalCase(str) {
+    return str.split(/[_\W]|(?=[A-Z])/).join('-').toLowerCase();
 }
 ```
