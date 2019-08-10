@@ -2,7 +2,7 @@
 
 # Freecodecamp Basic Algorithms
 
-From the Freecodecamp Basic Algorithms Javascript certification module
+From the Freecodecamp Javascript Certification Basic Algorithms module
 
 - [Celsius to Fahrenheit](#celsius-to-fahrenheit)
 - [Reverse String](#reverse-string)
