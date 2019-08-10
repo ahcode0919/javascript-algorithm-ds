@@ -24,3 +24,16 @@ export function sumAll(arr) {
     return (arr[0] + arr[1]) + range;
 }
 ```
+
+#### Diff Two Arrays
+
+Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+```javascript
+export function diffArray(arr1, arr2) {
+    return [
+        ...arr1.filter((value) => arr2.indexOf(value) === -1),
+        ...arr2.filter((value) => arr1.indexOf(value) === -1)
+      ]
+}
+```
