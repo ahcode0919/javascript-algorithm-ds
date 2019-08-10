@@ -7,6 +7,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Sum All Numbers In a Range](#sum-all-numbers-in-a-range)
 - [Diff Two Arrays](#diff-two-arrays)
 - [Seek and Destroy](#seek-and-destroy)
+- [Wherefore Art Thou](#wherefore-art-thou)
 
 #### Sum All Numbers In a Range
 
@@ -47,5 +48,24 @@ You will be provided with an initial array (the first argument in the destroyer 
 ```javascript
 export function destroyer(arr, ...values) {
     return arr.filter((num) => !values.includes(num));
+}
+```
+
+#### Wherefore Art Thou
+
+Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+
+```javascript
+export function whatIsInAName(collection, source) {
+    return collection.filter((obj) => {
+        for(let key in source) {
+            if (obj[key] !== source[key]) {
+                return false;
+            }
+        }
+        return true;
+    });
 }
 ```
