@@ -13,6 +13,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Search and Replace](#search-and-replace)
 - [DNA Pairing](#dna-pairing)
 - [Missing Letters](#missing-letters)
+- [Sorted Union](#sorted-union)
 
 #### Sum All Numbers In a Range
 
@@ -196,5 +197,26 @@ export function fearNotLetter(str) {
     }
 
     return undefined;
+}
+```
+
+#### Sorted Union
+
+Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+
+```javascript
+export function uniteUnique(...arr) {
+    return arr.reduce((union, subArray) => {
+        for (let num of subArray) {
+            if (union.indexOf(num) === -1) {
+                union.push(num);
+            }
+        }
+        return union;
+    }, []);
 }
 ```
