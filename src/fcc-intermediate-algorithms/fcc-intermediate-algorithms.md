@@ -9,6 +9,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Seek and Destroy](#seek-and-destroy)
 - [Wherefore Art Thou](#wherefore-art-thou)
 - [Spinal Tap Case](#spinal-tap-case)
+- [Pig Latin](#pig-latin)
 
 #### Sum All Numbers In a Range
 
@@ -78,5 +79,30 @@ Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-da
 ```javascript
 export function spinalCase(str) {
     return str.split(/[_\W]|(?=[A-Z])/).join('-').toLowerCase();
+}
+```
+
+#### Pig Latin
+
+Translate the provided string to pig latin.
+
+Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".
+
+If a word begins with a vowel you just add "way" to the end.
+
+Input strings are guaranteed to be English words in all lowercase.
+
+```javascript
+export function translatePigLatin(str) {
+    if (str === "") {
+        return "";
+    }
+
+    if (/^[aeiou]/.test(str)) {
+        return str + 'way';
+    }
+
+    let splitStr = str.split(/([aeiou].*)/)
+    return [splitStr[1], splitStr[0], 'ay'].join('');
 }
 ```
