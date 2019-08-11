@@ -8,7 +8,7 @@ Repository for examples of typical algorithm solutions and data structures in Ja
 
 ## Freecodecamp: Javascript Algorithms & Data Structures
 
-Algorithms from the Freecodecamp Javascript coursework
+Algorithms from the Freecodecamp Javascript algorithms and data structures certification coursework
 
 - [Basic Algorithms](https://github.com/ahcode0919/javascript-algorithm-ds/blob/master/src/fcc-basic-algorithms/fcc-basic-algorithms.md#freecodecamp-basic-algorithms)
 - [Intermediate Algorithms](https://github.com/ahcode0919/javascript-algorithm-ds/blob/master/src/fcc-intermediate-algorithms/fcc-intermediate-algorithms.md#freecodecamp-intermediate-algorithms)
