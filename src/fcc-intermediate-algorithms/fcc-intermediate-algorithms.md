@@ -11,6 +11,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Spinal Tap Case](#spinal-tap-case)
 - [Pig Latin](#pig-latin)
 - [Search and Replace](#search-and-replace)
+- [DNA Pairing](#dna-pairing)
 
 #### Sum All Numbers In a Range
 
