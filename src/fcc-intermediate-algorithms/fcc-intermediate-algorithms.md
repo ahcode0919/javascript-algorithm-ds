@@ -12,6 +12,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Pig Latin](#pig-latin)
 - [Search and Replace](#search-and-replace)
 - [DNA Pairing](#dna-pairing)
+- [Missing Letters](#missing-letters)
 
 #### Sum All Numbers In a Range
 
@@ -172,5 +173,28 @@ export function pairElements(str) {
         pairs.push([element, pair(element)]);
     }
     return pairs;
+}
+```
+
+#### Missing Letters
+
+Find the missing letter in the passed letter range and return it.
+
+If all letters are present in the range, return undefined.
+
+```javascript
+export function fearNotLetter(str) {
+    if ((str.charCodeAt(str.length - 1) - str.charCodeAt(0)) + 1 === str.length) {
+        return undefined;
+    }
+
+    for (let i = 0; i < str.length - 1; i++) {
+        const currentCharCode = str.charCodeAt(i);
+        if (currentCharCode + 1 !== str.charCodeAt(i + 1)) {
+            return String.fromCharCode(currentCharCode + 1);
+        }
+    }
+
+    return undefined;
 }
 ```
