@@ -14,6 +14,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [DNA Pairing](#dna-pairing)
 - [Missing Letters](#missing-letters)
 - [Sorted Union](#sorted-union)
+- [Convert HTML Entities](#convert-html-entities)
 
 #### Sum All Numbers In a Range
 
@@ -218,5 +219,36 @@ export function uniteUnique(...arr) {
         }
         return union;
     }, []);
+}
+```
+
+#### Convert HTML Entities
+
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+
+```javascript
+export function convertHTML(str) {
+    const getEscapedString = function(char) {
+        switch (char) {
+            case '>':
+                return '&gt;';
+            case '&':
+                return '&amp;';
+            case '<':
+                return '&lt;';
+            case '\'':
+                return '&apos;';
+            case '\"':
+                return '&quot;';
+            default:
+                return char;
+        }
+    }
+    let newString = [];
+    for (let char of str) {
+        newString.push(getEscapedString(char));
+    }
+
+    return newString.join('');
 }
 ```
