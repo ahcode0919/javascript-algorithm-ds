@@ -18,6 +18,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Sum All Odd Fibonacci Numbers](#sum-all-odd-ficonacci-numbers)
 - [Sum All Primes](#sum-all-primes)
 - [Smallest Common Multiple](#smallest-common-multiple)
+- [Drop It](#drop-it)
 
 #### Sum All Numbers In a Range
 
@@ -334,5 +335,21 @@ export function smallestCommons(arr) {
             return i;
         }
     }
+}
+```
+
+#### Drop It
+
+Given the array `arr`, iterate through and remove each element starting from the first element (the 0 index) until the function `func` returns `true` when the iterated element is passed through it.
+
+Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+```javascript
+export function dropElements(arr, func) {
+  const element = arr.find(func);
+  if (element === undefined) {
+    return [];
+  }
+  return arr.slice(arr.indexOf(element));
 }
 ```
