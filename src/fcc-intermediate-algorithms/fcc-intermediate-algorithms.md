@@ -19,6 +19,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Sum All Primes](#sum-all-primes)
 - [Smallest Common Multiple](#smallest-common-multiple)
 - [Drop It](#drop-it)
+- [Binary Agents](#binary-agents)
 
 #### Sum All Numbers In a Range
 
@@ -363,5 +364,19 @@ export function steamrollArray(arr) {
   return arr.reduce((acc, val) => {
     return Array.isArray(val) ? acc.concat(steamrollArray(val)) : acc.concat(val)
   }, []);
+}
+```
+
+#### Binary Agents
+
+Return an English translated sentence of the passed binary string.
+
+The binary string will be space separated.
+
+```javascript
+export function binaryAgents(str) {
+  let binaryArray = str.split(" ");
+  let stringArray = binaryArray.map(val => String.fromCharCode(parseInt(val, 2)));
+  return stringArray.join("");
 }
 ```
