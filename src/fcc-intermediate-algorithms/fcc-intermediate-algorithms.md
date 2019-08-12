@@ -23,6 +23,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Everything Be True](#everything-be-true)
 - [Arguments Optional](#arguments-optional)
 - [Make a Person](#make-a-person)
+- [Map the Debris](#map-the-debris)
 
 #### Sum All Numbers In a Range
 
@@ -455,5 +456,30 @@ export function Person(firstAndLast) {
 
   this.setFirstName = (first) => fullName = first + ' ' + fullName.split(' ')[1];this.setFullName = (newFullName) => fullName = newFullName;
   this.setLastName = (last) => fullName = fullName.split(' ')[0] + ' ' + last;
+}
+```
+
+#### Map the Debris
+
+Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+
+The array will contain objects in the format `{name: 'name', avgAlt: avgAlt}`.
+
+You can read about orbital periods on Wikipedia.
+
+The values should be rounded to the nearest whole number. The body being orbited is Earth.
+
+The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km3s-2.
+
+```javascript
+export function orbitalPeriod(arr) {
+  const GM = 398600.4418;
+  const earthRadius = 6367.4447;
+
+  return arr.map((object) => {
+    const a = Math.pow(earthRadius + object.avgAlt, 3);
+    const computedOrbitalPeriod = Math.round(Math.PI * 2 * Math.sqrt(a / GM));
+    return { name: object.name, orbitalPeriod: computedOrbitalPeriod };
+  });
 }
 ```
