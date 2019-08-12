@@ -17,6 +17,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Convert HTML Entities](#convert-html-entities)
 - [Sum All Odd Fibonacci Numbers](#sum-all-odd-ficonacci-numbers)
 - [Sum All Primes](#sum-all-primes)
+- [Smallest Common Multiple](#smallest-common-multiple)
 
 #### Sum All Numbers In a Range
 
@@ -305,5 +306,33 @@ export function sumPrimes(num) {
         return primes;
     }
     return generatePrimes(num).reduce((acc, val) => acc + val);
+}
+```
+
+#### Smallest Common Multiple
+
+Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+
+The range will be an array of two numbers that will not necessarily be in numerical order.
+
+For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+
+```javascript
+export function smallestCommons(arr) {
+    const divisible = (target, low, high) => {
+        for(let k = low; k <= high; k++) {
+            if (target % k !== 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let sortedNums = arr[0] < arr[1] ? arr.slice(0) : [arr[1], arr[0]];
+    for (let i = sortedNums[1];; i += sortedNums[1]) {
+        if (divisible(i, sortedNums[0], sortedNums[1])) {
+            return i;
+        }
+    }
 }
 ```
