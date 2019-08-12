@@ -353,3 +353,15 @@ export function dropElements(arr, func) {
   return arr.slice(arr.indexOf(element));
 }
 ```
+
+#### Steamroller
+
+Flatten a nested array. You must account for varying levels of nesting.
+
+```javascript
+export function steamrollArray(arr) {
+  return arr.reduce((acc, val) => {
+    return Array.isArray(val) ? acc.concat(steamrollArray(val)) : acc.concat(val)
+  }, []);
+}
+```
