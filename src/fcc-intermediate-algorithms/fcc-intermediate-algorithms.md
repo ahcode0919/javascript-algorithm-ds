@@ -16,6 +16,7 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Sorted Union](#sorted-union)
 - [Convert HTML Entities](#convert-html-entities)
 - [Sum All Odd Fibonacci Numbers](#sum-all-odd-ficonacci-numbers)
+- [Sum All Primes](#sum-all-primes)
 
 #### Sum All Numbers In a Range
 
@@ -278,5 +279,31 @@ export function sumFibs(num) {
 
     let numbers = getFibonacciNumbers(num).filter((num) => num % 2 !== 0);
     return numbers.reduce((acc, num) => acc + num);
+}
+```
+
+#### Sum All Primes
+
+Sum all the prime numbers up to and including the provided number.
+
+A prime number is defined as a number greater than one and having only two divisors, one and itself. For example, 2 is a prime number because it's only divisible by one and two.
+
+The provided number may not be a prime.
+
+```javascript
+export function sumPrimes(num) {
+    const generatePrimes = (upperBound) => {
+        if (upperBound < 2) {
+            throw 'Upperbound must be >= 2';
+        }
+        let primes = [2]
+        for (let i = 3; i <= upperBound; i += 2) {
+            if (primes.find(val => i % val === 0) === undefined) {
+                primes.push(i);
+            }
+        }
+        return primes;
+    }
+    return generatePrimes(num).reduce((acc, val) => acc + val);
 }
 ```
