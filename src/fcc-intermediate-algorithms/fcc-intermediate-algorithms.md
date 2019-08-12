@@ -21,6 +21,8 @@ From the Freecodecamp Javascript Certification Intermediate Algorithms module
 - [Drop It](#drop-it)
 - [Binary Agents](#binary-agents)
 - [Everything Be True](#everything-be-true)
+- [Arguments Optional](#arguments-optional)
+- [Make a Person](#make-a-person)
 
 #### Sum All Numbers In a Range
 
@@ -426,5 +428,32 @@ export function addTogether(...arr) {
     }
     return val + arr[0];
   }
+}
+```
+
+#### Make a Person
+
+Fill in the object constructor with the following methods below:
+
+```javascript
+getFirstName() getLastName() getFullName() setFirstName(first) setLastName(last) setFullName(firstAndLast)
+```
+
+Run the tests to see the expected output for each method.
+
+The methods that take an argument must accept only one argument and it has to be a string.
+
+These methods must be the only available means of interacting with the object.
+
+```javascript
+export function Person(firstAndLast) {
+  let fullName = firstAndLast;
+
+  this.getFirstName = () => fullName.split(' ')[0];
+  this.getFullName = () => fullName;
+  this.getLastName = () => fullName.split(' ')[1];
+
+  this.setFirstName = (first) => fullName = first + ' ' + fullName.split(' ')[1];this.setFullName = (newFullName) => fullName = newFullName;
+  this.setLastName = (last) => fullName = fullName.split(' ')[0] + ' ' + last;
 }
 ```
