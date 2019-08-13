@@ -5,6 +5,8 @@
 From the Freecodecamp Javascript Certification Algorithms Projects module
 
 - [Palindrome Checker](#palindrome-checker)
+- [Roman Numeral Converter](#roman-numeral-converter)
+- [Caesars Cipher](#caesars-cipher)
 
 #### Palindrome Checker
 
@@ -23,5 +25,29 @@ We'll also pass strings with special symbols, such as `"2A3*3a2"`, `"2A3 3a2"`, 
 export function palindrome(str) {
   const normalizedStr = str.toLowerCase().split(/[\W_]+/).join('');
   return normalizedStr === normalizedStr.split('').reverse().join('');
+}
+```
+
+#### Roman Numeral Converter
+
+Convert the given number into a roman numeral.
+
+All roman numerals answers should be provided in upper-case.
+
+```javascript
+export function convertToRoman(num) {
+  var number = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+  var numerals = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+
+  var romanNumeral = '';
+
+  for (var index = 0; index < number.length; index++) {
+    while (number[index] <= num) {
+      romanNumeral += numerals[index];
+      num -= number[index];
+    }
+  }
+
+  return romanNumeral;
 }
 ```
