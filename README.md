@@ -11,9 +11,9 @@ Repository for examples of typical algorithm solutions and data structures in Ja
 
 Algorithms from the Freecodecamp Javascript algorithms and data structures certification coursework
 
-- [Basic Algorithms](https://github.com/ahcode0919/javascript-algorithm-ds/blob/master/src/fcc-basic-algorithms/fcc-basic-algorithms.md#freecodecamp-basic-algorithms)
-- [Intermediate Algorithms](https://github.com/ahcode0919/javascript-algorithm-ds/blob/master/src/fcc-intermediate-algorithms/fcc-intermediate-algorithms.md#freecodecamp-intermediate-algorithms)
-- [Algorithm Projects](https://github.com/ahcode0919/javascript-algorithm-ds/blob/master/src/fcc-course-projects/fcc_course_projects.md)
+- [Basic Algorithms](./src/fcc-basic-algorithms/README.md)
+- [Intermediate Algorithms](./src/fcc-intermediate-algorithms/README.md)
+- [Algorithm Projects](./src/fcc-course-projects/README.md)
 
 ## Leetcode
 
