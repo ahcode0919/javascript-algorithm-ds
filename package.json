@@ -3,12 +3,22 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.2.2",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0"
+    "husky": "^4.2.3",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "scripts": {
+    "lint": "eslint ./**/*.js",
+    "pretty-quick": "pretty-quick",
     "test": "jest"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
