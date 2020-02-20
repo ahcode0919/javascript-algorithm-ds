@@ -7,4 +7,6 @@ node_js:
 
 # command to run tests
 script:
+  - yarn pretty-quick
+  - yarn eslint
   - yarn test
