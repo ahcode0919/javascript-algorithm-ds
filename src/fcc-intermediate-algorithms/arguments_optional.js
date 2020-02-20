@@ -1,4 +1,4 @@
-export default function addTogether(...arr) {
+export function addTogether(...arr) {
   if (!arr.every(val => typeof val === "number")) {
     return undefined;
   }
