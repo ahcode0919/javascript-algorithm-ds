@@ -5,7 +5,7 @@
 Repository for examples of typical algorithm solutions and data structures in Javascript
 
 - [Freecodecamp - Javascript Algorithms & Data Structures](#freecodecamp-javascript-algorithms--data-structures)
-- [Leetcode](#leetcode)
+- [Algorithms](#algorithms)
 
 ## Freecodecamp: Javascript Algorithms & Data Structures
 
@@ -15,9 +15,9 @@ Algorithms from the Freecodecamp Javascript algorithms and data structures certi
 - [Intermediate Algorithms](./src/fcc-intermediate-algorithms/README.md)
 - [Algorithm Projects](./src/fcc-course-projects/README.md)
 
-## Leetcode
+## Algorithms
 
-- [Arrays](./src/leetcode/arrays/README.md)
+- [Arrays](./src/algorithms/arrays/README.md)
 
 ## Resources
 

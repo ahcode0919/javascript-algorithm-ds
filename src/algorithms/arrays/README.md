@@ -1,7 +1,7 @@
 # Arrays
 
-* [Merge Two Sorted Lists](#merge-two-sorted-lists)
-* [Two Sum](#two-sum)
+- [Merge Two Sorted Lists](#merge-two-sorted-lists)
+- [Two Sum](#two-sum)
 
 ## Merge Two Sorted Lists
 
