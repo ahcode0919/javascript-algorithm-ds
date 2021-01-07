@@ -1,6 +1,6 @@
 # Javascript Algorithms and Data Structures
 
-[![Build Status](https://travis-ci.org/ahcode0919/javascript-algorithm-ds.svg?branch=master)](https://travis-ci.org/ahcode0919/javascript-algorithm-ds)
+[![Build Status](https://travis-ci.com/ahcode0919/javascript-ds-algorithms.svg?branch=master)](https://travis-ci.com/ahcode0919/javascript-ds-algorithms)
 
 Repository for examples of typical algorithm solutions and data structures in Javascript
 
