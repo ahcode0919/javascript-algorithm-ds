@@ -6,6 +6,6 @@ node_js:
   - node
 
 script:
-  - yarn pretty-quick
+  - yarn pretty-quick --check
   - yarn eslint
   - yarn test
