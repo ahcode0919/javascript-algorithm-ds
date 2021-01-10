@@ -1,4 +1,4 @@
-import { addTogether } from "../../src/fcc-intermediate-algorithms/arguments_optional";
+import { addTogether } from '../../src/fcc-intermediate-algorithms/arguments_optional';
 
 test('should add arguments or return a function', () => {
   expect(addTogether(2, 4)).toBe(6);

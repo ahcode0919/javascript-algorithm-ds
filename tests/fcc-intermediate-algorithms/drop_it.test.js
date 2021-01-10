@@ -1,4 +1,4 @@
-import { dropElements } from "../../src/fcc-intermediate-algorithms/drop_it";
+import { dropElements } from '../../src/fcc-intermediate-algorithms/drop_it';
 
 test('should remove elements that do not satisfy the function', () => {
   expect(dropElements([1, 2, 3, 4], (n) => n >= 3)).toEqual([3, 4]);

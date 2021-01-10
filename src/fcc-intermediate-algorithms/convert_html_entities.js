@@ -1,24 +1,24 @@
 export function convertHTML(str) {
-  const getEscapedString = function(char) {
+  const getEscapedString = function (char) {
     switch (char) {
-      case ">":
-        return "&gt;";
-      case "&":
-        return "&amp;";
-      case "<":
-        return "&lt;";
+      case '>':
+        return '&gt;';
+      case '&':
+        return '&amp;';
+      case '<':
+        return '&lt;';
       case "'":
-        return "&apos;";
+        return '&apos;';
       case '"':
-        return "&quot;";
+        return '&quot;';
       default:
         return char;
     }
   };
-  let newString = [];
-  for (let char of str) {
+  const newString = [];
+  for (const char of str) {
     newString.push(getEscapedString(char));
   }
 
-  return newString.join("");
+  return newString.join('');
 }

@@ -1,7 +1,7 @@
 import {
   ListNode,
-  mergeTwoLists
-} from "../../src/algorithms/arrays/merge_two_sorted_lists";
+  mergeTwoLists,
+} from '../../src/algorithms/arrays/merge_two_sorted_lists';
 
 function createList(arr) {
   const head = new ListNode(arr[0]);
@@ -24,7 +24,7 @@ function getList(node) {
   return list;
 }
 
-test("should merge two arrays", () => {
+test('should merge two arrays', () => {
   const l1 = createList([1, 2, 5, 8]);
   const l2 = createList([2, 3, 4, 6]);
   const ans = getList(mergeTwoLists(l1, l2));

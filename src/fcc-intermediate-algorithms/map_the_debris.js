@@ -3,8 +3,8 @@ export function orbitalPeriod(arr) {
   const earthRadius = 6367.4447;
 
   return arr.map((object) => {
-    const a = Math.pow(earthRadius + object.avgAlt, 3);
+    const a = (earthRadius + object.avgAlt) ** 3;
     const computedOrbitalPeriod = Math.round(Math.PI * 2 * Math.sqrt(a / GM));
-    return {name: object.name, orbitalPeriod: computedOrbitalPeriod };
+    return { name: object.name, orbitalPeriod: computedOrbitalPeriod };
   });
 }
