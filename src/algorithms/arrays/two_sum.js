@@ -1,4 +1,4 @@
-export default function(nums, target) {
+export default function booHoo(nums, target) {
   const map = {};
 
   for (let i = 0; i < nums.length; i += 1) {

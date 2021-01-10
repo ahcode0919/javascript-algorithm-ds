@@ -1,5 +1,7 @@
 export function binaryAgents(str) {
-  let binaryArray = str.split(" ");
-  let stringArray = binaryArray.map(val => String.fromCharCode(parseInt(val, 2)));
-  return stringArray.join("");
+  const binaryArray = str.split(' ');
+  const stringArray = binaryArray.map((val) =>
+    String.fromCharCode(parseInt(val, 2))
+  );
+  return stringArray.join('');
 }

@@ -1,4 +1,4 @@
-import { palindrome } from "../../src/fcc-course-projects/palindrome_checker";
+import { palindrome } from '../../src/fcc-course-projects/palindrome_checker';
 
 test('should ', () => {
   expect(palindrome('aba')).toBe(true);

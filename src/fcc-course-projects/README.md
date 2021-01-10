@@ -9,7 +9,7 @@ From the Freecodecamp Javascript Certification Algorithms Projects module
 - [Caesars Cipher](#caesars-cipher)
 - [Telephone Number Validator](#telephone-number-validator)
 
-#### Palindrome Checker
+## Palindrome Checker
 
 Return `true` if the given string is a palindrome. Otherwise, return `false`.
 
@@ -24,12 +24,15 @@ We'll also pass strings with special symbols, such as `"2A3*3a2"`, `"2A3 3a2"`, 
 
 ```javascript
 export function palindrome(str) {
-  const normalizedStr = str.toLowerCase().split(/[\W_]+/).join('');
+  const normalizedStr = str
+    .toLowerCase()
+    .split(/[\W_]+/)
+    .join('');
   return normalizedStr === normalizedStr.split('').reverse().join('');
 }
 ```
 
-#### Roman Numeral Converter
+## Roman Numeral Converter
 
 Convert the given number into a roman numeral.
 
@@ -37,12 +40,26 @@ All roman numerals answers should be provided in upper-case.
 
 ```javascript
 export function convertToRoman(num) {
-  var number = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
-  var numerals = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+  var number = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  var numerals = [
+    'M',
+    'CM',
+    'D',
+    'CD',
+    'C',
+    'XC',
+    'L',
+    'XL',
+    'X',
+    'IX',
+    'V',
+    'IV',
+    'I',
+  ];
 
   var romanNumeral = '';
 
-  for (var index = 0; index < number.length; index++) {
+  for (var index = 0; index < number.length; index += 1) {
     while (number[index] <= num) {
       romanNumeral += numerals[index];
       num -= number[index];
@@ -53,7 +70,7 @@ export function convertToRoman(num) {
 }
 ```
 
-#### Caesars Cipher
+## Caesars Cipher
 
 One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
 
@@ -66,7 +83,7 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
 ```javascript
 export function rot13(str) {
   // A = 0 , Z = 25
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let decoded = [];
   for (let i = 0; i < str.length; i += 1) {
     if (/\W/.test(str[i])) {
@@ -74,14 +91,15 @@ export function rot13(str) {
       continue;
     }
     const startIndex = alphabet.indexOf(str[i]);
-    const newIndex = startIndex + 13 <= 25 ? startIndex + 13 : (startIndex + 13) - 26;
+    const newIndex =
+      startIndex + 13 <= 25 ? startIndex + 13 : startIndex + 13 - 26;
     decoded.push(alphabet[newIndex]);
   }
   return decoded.join('');
 }
 ```
 
-#### Telephone Number Validator
+## Telephone Number Validator
 
 Return `true` if the passed string looks like a valid US phone number.
 
@@ -100,11 +118,13 @@ For this challenge you will be presented with a string such as `800-692-7753` or
 
 ```javascript
 export function telephoneCheck(str) {
-  return /^(1 ?)?(\([0-9]{3}\)|[0-9]{3})[ \-]?[0-9]{3}[ \-]?[0-9]{4}$$/.test(str);
+  return /^(1 ?)?(\([0-9]{3}\)|[0-9]{3})[ \-]?[0-9]{3}[ \-]?[0-9]{4}$$/.test(
+    str
+  );
 }
 ```
 
-#### Cash Register
+## Cash Register
 
 Design a cash register drawer function `checkCashRegister()` that accepts purchase price as the first argument (`price`), payment as the second argument (`cash`), and cash-in-drawer (`cid`) as the third argument.
 
@@ -122,14 +142,14 @@ Otherwise, return `{status: "OPEN", change: [...]}`, with the change due in coin
 export function checkCashRegister(price, cash, cid) {
   const currencyVals = [10000, 2000, 1000, 500, 100, 25, 10, 5, 1];
   const expectedChange = cash * 100 - price * 100;
-  const cidTotal = cid.reduce((acc, val) => acc + (val[1] * 100), 0); 
+  const cidTotal = cid.reduce((acc, val) => acc + val[1] * 100, 0);
 
   let change = [];
   let normCid = cid.slice(0).map((val) => [val[0], Math.round(val[1] * 100)]);
   let remainingChange = expectedChange;
 
   if (cidTotal < expectedChange) {
-    return { status: "INSUFFICIENT_FUNDS", change: [] };
+    return { status: 'INSUFFICIENT_FUNDS', change: [] };
   }
 
   for (let val of currencyVals) {
@@ -145,7 +165,11 @@ export function checkCashRegister(price, cash, cid) {
       continue;
     }
 
-    while (cidCurrency[1] > 0 && remainingChange > 0 && remainingChange >= val) {
+    while (
+      cidCurrency[1] > 0 &&
+      remainingChange > 0 &&
+      remainingChange >= val
+    ) {
       cidCurrency[1] -= val;
       remainingChange -= val;
       dispersedChange[1] += val;
@@ -154,16 +178,19 @@ export function checkCashRegister(price, cash, cid) {
   }
 
   if (remainingChange > 0) {
-    return { status: "INSUFFICIENT_FUNDS", change: [] }
+    return { status: 'INSUFFICIENT_FUNDS', change: [] };
   }
   if (normCid.reduce((acc, val) => acc + val[1], 0) === 0) {
-    return { status: "CLOSED", change: cid };
+    return { status: 'CLOSED', change: cid };
   }
-  return { status: "OPEN", change: change.map((val) => [val[0], val[1] / 100]) };
+  return {
+    status: 'OPEN',
+    change: change.map((val) => [val[0], val[1] / 100]),
+  };
 }
 
 function numberToCurrency(num) {
-  switch(num) {
+  switch (num) {
     case 10000:
       return 'ONE HUNDRED';
     case 2000:

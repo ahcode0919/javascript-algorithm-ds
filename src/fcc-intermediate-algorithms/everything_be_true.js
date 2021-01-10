@@ -1,3 +1,3 @@
 export function truthCheck(collection, pre) {
-  return collection.every((val) => Boolean(val[pre]));
+  return collection.every((val) => val[pre] !== undefined);
 }

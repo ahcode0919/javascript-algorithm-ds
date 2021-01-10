@@ -1,11 +1,26 @@
-export function Person(firstAndLast) {
-  let fullName = firstAndLast;
+export class Person {
+  constructor(first, last) {
+    this._firstName = first;
+    this._lastName = last;
+  }
 
-  this.getFirstName = () => fullName.split(' ')[0];
-  this.getFullName = () => fullName;
-  this.getLastName = () => fullName.split(' ')[1];
+  get firstName() {
+    return this._firstName;
+  }
 
-  this.setFirstName = (first) => fullName = first + ' ' + fullName.split(' ')[1];
-  this.setFullName = (newFullName) => fullName = newFullName;
-  this.setLastName = (last) => fullName = fullName.split(' ')[0] + ' ' + last;
-} 
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
+  }
+
+  get lastName() {
+    return this._lastName;
+  }
+
+  set firstName(firstName) {
+    this._firstName = firstName;
+  }
+
+  set lastName(lastName) {
+    this._lastName = lastName;
+  }
+}
